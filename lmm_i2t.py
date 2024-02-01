@@ -1,6 +1,6 @@
 import torch
 # from torchvision import transforms
-from imagenet_lt_data_loaders import ImageNetLTDataLoader
+from lt_dataloaders import ImageNetLTDataLoader
 from data_txt.imagenet_label_mapping import get_readable_name
 from gpt4v import gpt4v_observe
 from ultis import sample_counter

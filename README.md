@@ -40,18 +40,19 @@ data_txt
 ```
 
 ## Running Scripts
+Before running, please replace your own OPENAI key.
 
 ### Generated Existing Tail-class Descriptions
 ``` bash
-python imagenet_i2t.py
+python lmm_i2t.py
 ```
 
 ### Generated Extended Tail-class Descriptions 
 ``` bash
-python gpt4_llm.py
+python lmm_extension.py
 ```
 
 ### Generated Extended Data using Cyclic-assessing
 ``` bash
-python imagenet_i2t.py
+python draw_i2t.py
 ```
