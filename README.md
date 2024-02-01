@@ -1,0 +1,1 @@
+# LTGC: Long-Tail Recognition via Leveraging Generated Content
