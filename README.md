@@ -1,5 +1,5 @@
 # LTGC: Long-Tail Recognition via Leveraging Generated Content [Official, CVPR 2024]
-Qihao Zhao <sup>\*</sup>, Yalun Dai <sup>\*</sup>, Hao Li, Wei Hu, Fan Zhang, Jun Liu
+Qihao Zhao <sup>1,\*</sup>, Yalun Dai <sup>2,\*</sup>, Hao Li <sup>3</sup>, Wei Hu <sup>1</sup>, Fan Zhang <sup>1</sup>, Jun Liu <sup>4</sup>
 
 \* Equal contribution
 
