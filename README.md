@@ -1,4 +1,7 @@
-# LTGC: Long-Tail Recognition via Leveraging Generated Content
+# LTGC: Long-Tail Recognition via Leveraging Generated Content [Official, CVPR 2024]
+Qihao Zhao <sup>\*</sup>, Yalun Dai <sup>\*</sup>, Hao Li, Wei Hu, Fan Zhang, Jun Liu
+
+\* Equal contribution
 
 ## Dataset Preparation
 
