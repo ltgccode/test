@@ -3,9 +3,7 @@ import pandas as pd
 from data_txt.imagenet_label_mapping import get_readable_name
 import csv
 
-# api_key = "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"
-# api_key = "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"
-api_key = "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"
+api_key = "Replace with your own OPENAI KEY."
 
 client = OpenAI(api_key=api_key)
 
