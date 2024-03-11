@@ -17,23 +17,20 @@ def encode_image(image_path):
   
 def encode_tensor_image(tensor):
     # print(tensor.shape)
-    # 确保tensor是 (1, 3, H, W) 形状
     if tensor.ndim == 4 and tensor.shape[0] == 1:
-        tensor = tensor.squeeze(0)  # 移除批次维度
-
-    # toPIL = transforms.ToPILImage() #这个函数可以将张量转为PIL图片，由小数转为0-255之间的像素值
+        tensor = tensor.squeeze(0)  
+    # toPIL = transforms.ToPILImage() 
     # image = toPIL(tensor)
     tensor = tensor.squeeze(0).permute(1, 2, 0)
     image = Image.fromarray(tensor.mul(255).byte().numpy()).convert('RGB')
 
-    # 将PIL图像保存到字节流
+
     buffer = io.BytesIO()
     buffers='./test.jpg'
-    image.save(buffer, format="JPEG")  # 或者PNG等其他格式
+    image.save(buffer, format="JPEG")  
     image.save(buffers, format="JPEG")  
     buffer.seek(0)
 
-    # 对字节流进行base64编码
     image_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
 
     return image_base64
@@ -80,7 +77,7 @@ def gpt4v_observe(image_tensor, text_prompt):
 
 
 
-# client = OpenAI(api_key='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')
+# client = OpenAI(api_key='Replace with your own OPENAI KEY.')
 
 # response = client.chat.completions.create(
 #   model="gpt-4-vision-preview",
