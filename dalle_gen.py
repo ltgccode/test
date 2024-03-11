@@ -1,7 +1,7 @@
 from openai import OpenAI
 import requests
 
-# client = OpenAI(api_key='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')
+# client = OpenAI(api_key='Replace with your own OPENAI KEY.')
 
 # response = client.images.generate(
 #   model="dall-e-2",
@@ -25,7 +25,7 @@ import requests
 #     print("Fail...")
 
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='Replace with your own OPENAI KEY.')
 saved_path = "dalle_gen/imagenet/white_siamese_cat_2.jpg"
 
 def dalle_gen(client, saved_path, input_text, saved=False):
