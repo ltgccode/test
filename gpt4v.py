@@ -8,8 +8,7 @@ import io
 from torchvision import transforms
 
 # OpenAI API Key
-# api_key = "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"
-api_key = "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"
+api_key = "Replace with your own OPENAI KEY."
 
 # Function to encode the image
 def encode_image(image_path):
