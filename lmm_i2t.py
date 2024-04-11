@@ -9,11 +9,12 @@ import json
 import csv
 
 
-# 数据目录和其他参数
+# hyper-param
 data_dir = 'Imagenet'
 batch_size = 1 # Not for training! Cannot change!
 num_workers = 4
 training = True
+max_num = 20
 
 imagenet_loader = ImageNetLTDataLoader(data_dir=data_dir, 
                                        batch_size=batch_size, 
@@ -34,7 +35,7 @@ data_to_write = []
 for epoch, pack in enumerate(imagenet_loader):
     data, target, index = pack
 
-    if dict_class_number[str(int(target))] < 25:
+    if dict_class_number[str(int(target))] < max_num:
         real_name = get_readable_name(int(target)).split(", ")[0]
         text_prompt="Template: A photo of the class "+real_name+", {with distinctive features}{in specific scenes}. Please use the Template to briefly describe the image of the class " + real_name + '.'
         # print(text_prompt)

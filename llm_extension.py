@@ -11,7 +11,6 @@ df = pd.read_csv('descriptions_data/existing_description_list.csv', header=None,
 grouped_texts = df.groupby('label')['text'].apply(lambda x: '\n'.join(x)).to_dict()
 grouped_list = df.groupby('label')['text'].apply(list).to_dict()
 
-# 打印每个标签对应的文本
 for label, text in grouped_texts.items():
     current_all_description = grouped_list[label]
     # print(f"Label {label}:\n{text}\n")
@@ -24,10 +23,12 @@ for label, text in grouped_texts.items():
 
       # print(current_description)
 
+      ### self-reflection
       user_content = "Besides these descriptions mentioned above, please use the same Template to list other possible {distinctive features} and {specific scenes} for the class " + real_name
 
       completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        # model="gpt-3.5-turbo",
+        model="gpt-4-turbo-preview",
         messages=[
           {"role": "system", "content": system_content},
           {"role": "user", "content": current_description},
@@ -36,8 +37,17 @@ for label, text in grouped_texts.items():
       )
 
       output = completion.choices[0].message.content
-      sentences = output.split(". ")
-      current_all_description.append(sentences)
+      # sentences = output.split(". ")
+      if '\n\n- ' in output:
+        sentences = output.split("\n\n")
+      elif '\n\n' in output:
+        sentences = output.split("\n\n")
+      elif '\n- ' in output:
+        sentences = output.split("\n- ")
+      elif '\n ' in output:
+        sentences = output.split("\n")
+
+      current_all_description.extend(sentences)
 
       with open('descriptions_data/extended_description.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
