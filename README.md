@@ -64,7 +64,7 @@ python lmm_i2t.py -d $DATASET_PATH -m $MAX_NUMBER -f $CLASS_NUMBER_FILE -exi $EX
 python lmm_extension.py -exi $EXIST_DESCRIPTION_FILE -m $MAX_GENERATED_IMAGES -ext $EXTEND_DESCRIPTION_FILE
 ```
 
-### Generated Extended Data using Cyclic-assessing
+### Generated Extended Data using Iterative Evaluation
 ``` bash
 python draw_i2t.py -ext $EXTEND_DESCRIPTION_FILE -d $DATASET_PATH -t $THRESH -r $MAX_ROUNDS
 ```
