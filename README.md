@@ -52,19 +52,19 @@ data_txt
 ```
 
 ## Running Scripts
-Before running, please replace your own OPENAI key.
+Before running, please replace your own **OPENAI key**.
 
 ### Generated Existing Tail-class Descriptions
 ``` bash
-python lmm_i2t.py
+python lmm_i2t.py -d $DATASET_PATH -m $MAX_NUMBER -f $CLASS_NUMBER_FILE -exi $EXIST_DESCRIPTION_FILE
 ```
 
 ### Generated Extended Tail-class Descriptions 
 ``` bash
-python lmm_extension.py
+python lmm_extension.py -exi $EXIST_DESCRIPTION_FILE -m $MAX_GENERATED_IMAGES -ext $EXTEND_DESCRIPTION_FILE
 ```
 
 ### Generated Extended Data using Cyclic-assessing
 ``` bash
-python draw_i2t.py
+python draw_i2t.py -ext $EXTEND_DESCRIPTION_FILE -d $DATASET_PATH -t $THRESH -r $MAX_ROUNDS
 ```
