@@ -1,4 +1,4 @@
-# LTGC: Long-Tail Recognition via Leveraging Generated Content [Official, CVPR 2024, Oral]
+# LTGC: Long-Tail Recognition via Leveraging LLMs-driven Generated Content [Official, CVPR 2024, Oral]
 [[Project]](https://github.com/ltgccode/LTGC-Long-Tail-Recognition-via-Leveraging-Generated-Content) [[Paper]](https://arxiv.org/pdf/2403.05854.pdf)
 
 ## Overview
