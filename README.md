@@ -1,5 +1,5 @@
-# LTGC: Long-Tail Recognition via Leveraging LLMs-driven Generated Content [Official, CVPR 2024, Oral]
-[[Project]](https://github.com/ltgccode/LTGC-Long-Tail-Recognition-via-Leveraging-Generated-Content) [[Paper]](https://arxiv.org/pdf/2403.05854.pdf)
+# Test Code Repo
+Official Code: https://github.com/dialogueeeeee/LTGC
 
 ## Overview
 [Qihao Zhao](https://scholar.google.com/citations?hl=zh-CN&user=sECb19EAAAAJ)<sup>\*</sup>,&nbsp; [Yalun Dai](https://github.com/dialogueeeeee)<sup>\*</sup>,&nbsp; [Hao Li](https://scholar.google.com/citations?user=4dokjDoAAAAJ),&nbsp; [Wei Hu](https://scholar.google.com/citations?user=ACJickwAAAAJ),&nbsp; [Fan Zhang](https://scholar.google.com/citations?user=CujOi1kAAAAJ),&nbsp; [Jun Liu](https://scholar.google.com/citations?user=Q5Ild8UAAAAJ),&nbsp; 
